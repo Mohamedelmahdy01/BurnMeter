@@ -1,4 +1,4 @@
-# Calorie Burn Prediction System
+# Calorie Burn Prediction System (BurnMeter)
 
 ## **Overview**
 This project aims to develop an AI-based system to accurately predict the calories burned during various exercises and provide personalized recommendations for improving fitness and health. By leveraging individual user data and advanced machine learning techniques, the system overcomes the limitations of generalized calorie-tracking tools, offering tailored insights to users.
