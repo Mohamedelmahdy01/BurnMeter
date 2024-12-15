@@ -1,7 +1,7 @@
-# Calorie Burn Prediction System (BurnMeter)
+# **Calorie Burn Prediction System (BurnMeter)**
 
 ## **Overview**
-This project aims to develop an AI-based system to accurately predict the calories burned during various exercises and provide personalized recommendations for improving fitness and health. By leveraging individual user data and advanced machine learning techniques, the system overcomes the limitations of generalized calorie-tracking tools, offering tailored insights to users.
+This project aims to develop an AI-based system to accurately predict the calories burned during various exercises and provide personalized recommendations for improving fitness and health. By leveraging individual user data and the XGBoost machine learning model, the system overcomes the limitations of generalized calorie-tracking tools, offering tailored insights to users.
 
 ---
 
@@ -22,7 +22,7 @@ The project uses two datasets:
    - `Weight`: Weight of the user (in kg).
    - `Duration`: Exercise duration (in minutes).
    - `Heart_Rate`: Average heart rate during exercise (bpm).
-   - `Body_Temp`: Average body temperature during exercise (°C).
+   - `Body_Temp`: Average body temperature during exercise (\u00b0C).
 
 2. **Calories Data (`calories.csv`)**:
    - `User_ID`: Unique identifier (matches `User_ID` in `exercise.csv`).
@@ -32,21 +32,22 @@ The project uses two datasets:
 
 ## **Methodology**
 1. **Data Preprocessing**:
-   - Merging datasets using `User_ID`.
-   - Cleaning and normalizing data to handle inconsistencies.
+   - Merged datasets using `User_ID`.
+   - Cleaned and normalized data to handle inconsistencies.
 2. **Feature Engineering**:
-   - Analyzing correlations between exercise metrics and calories burned.
+   - Analyzed correlations between exercise metrics and calories burned.
+   - Converted categorical data (e.g., gender) into numerical values.
 3. **Model Development**:
-   - Training machine learning models (e.g., Linear Regression, Random Forest, Neural Networks).
-   - Evaluating model performance using metrics such as RMSE and MAE.
+   - Used the **XGBoost Regressor** to train a model on the processed data.
+   - Evaluated the model's performance using metrics such as Mean Absolute Error (MAE).
 4. **Personalized Insights**:
-   - Using model predictions to provide individualized exercise recommendations.
+   - Used model predictions to provide individualized exercise recommendations.
 
 ---
 
 ## **Technologies Used**
 - **Programming Language**: Python
-- **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+- **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost
 - **Tools**: Jupyter Notebook
 
 ---
@@ -55,7 +56,7 @@ The project uses two datasets:
 1. **Setup**:
    - Install required Python libraries using:
      ```bash
-     pip install pandas numpy scikit-learn matplotlib seaborn
+     pip install pandas numpy scikit-learn matplotlib seaborn xgboost
      ```
    - Clone the repository and navigate to the project directory.
 
@@ -70,9 +71,9 @@ The project uses two datasets:
 ---
 
 ## **Results**
-- The AI model achieved high accuracy in calorie burn predictions.
-- Demonstrated significant relationships between exercise metrics and calories burned.
-- Enabled personalized fitness insights for different user profiles.
+- The XGBoost model achieved reliable accuracy in calorie burn predictions.
+- Highlighted significant relationships between exercise metrics and calories burned through visualizations.
+- Demonstrated personalized fitness insights for different user profiles.
 
 ---
 
@@ -85,3 +86,4 @@ The project uses two datasets:
 
 ## **License**
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
